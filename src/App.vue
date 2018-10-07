@@ -5,6 +5,7 @@
     <br><br>
     <div class="alert alert-warning" v-show="show">test</div>
     <appmenu class='menu' v-if="show"></appmenu>
+    <router-view></router-view>
   </div>
 </template>
 
