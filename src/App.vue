@@ -1,16 +1,18 @@
 <template>
-  <div id="app">
-    <button class="btn btn-primary" @click="show = !show">Toggle Menu</button>  
-    {{ show }}
-    <br><br>
-    <div class="alert alert-warning" v-show="show">test</div>
-    <appmenu class='menu' v-if="show"></appmenu>
-    <router-view></router-view>
+  <div id="app" class="container">
+      <br>
+      <button class="btn btn-primary" @click="show = !show">Toggle Menu</button>  
+      <hr>    
+    <div class="flex">
+        <appmenu class='menu' v-show="show"></appmenu>
+        <br><br>
+        <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import Menu from './components/menu.vue'
+import Menu from './components/Menu.vue'
 
 export default {
   name: 'app',
@@ -31,6 +33,11 @@ export default {
 }
 .menu{
   height: 200px;
+}
+
+.flex{
+  display:flex;
+  justify-content:flex-start;
 }
 
 </style>
