@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div>
         <h2>Menu</h2>
         <br>
         <ul>
@@ -18,8 +18,10 @@ export default {
 
 <style scoped>
 div{
-    width:40%;
-    height: 200px;
+    position: sticky;
+    top: 0;
+    /* width:280px; */
+    height: 100%;
     background:green;
     color:white;
     margin-right: 20px;
@@ -38,6 +40,5 @@ ul li{
     list-style-type: none;
     color:white;
 }
-
 
 </style>
