@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container clearfix">
+  <div id="app" class="container clearfix menu-color">
       <div class="row">
         <div class="col-md-12">
           <button class="btn btn-primary" @click="show = !show">Toggle Menu</button>  
@@ -39,6 +39,7 @@ export default {
 }
 .menu1{
   height: 100%;
+  background: red;
   /* width: 280px; */
   /* height: 200px; */
 }
