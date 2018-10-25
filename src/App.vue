@@ -1,13 +1,19 @@
 <template>
-  <div id="app" class="container">
-      <br>
-      <button class="btn btn-primary" @click="show = !show">Toggle Menu</button>  
-      <hr>    
-    <div class="flex">
-        <appmenu class='menu' v-show="show"></appmenu>
-        <br><br>
-        <router-view></router-view>
-    </div>
+  <div id="app" class="container clearfix">
+      <div class="row">
+        <div class="col-md-12">
+          <button class="btn btn-primary" @click="show = !show">Toggle Menu</button>  
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="flex">
+            <appmenu class='menu1' v-show="show"></appmenu>
+            <router-view></router-view>
+          </div>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -29,15 +35,24 @@ export default {
 
 <style>
 #app {
-  height: 300px;
+  height: 100%;
 }
-.menu{
-  height: 200px;
+.menu1{
+  height: 100%;
+  /* width: 280px; */
+  /* height: 200px; */
 }
 
 .flex{
   display:flex;
   justify-content:flex-start;
+  align-items: stretch;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
 }
 
 </style>
